@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+       // Question 1.
+        var age = prompt("Enter Your name please!");
+        var ansver = age<10 ? "you are cild" : age<20 ? "you are junior" : age<40 ? "you are man" : "you are old man";
+        alert(ansver);
+
+       //Question 2.
+        var number = 1.24655478;
+        function normalNumber (number,step)
+        {
+            normalNumber = number.toFixed(step);
+            return  normalNumber;
+        }
+        document.write(normalNumber(number,4)+"<br>");
+
+       //Question 3.
+        var string = "qweqwe,qw qwe,,qwe qwe,qwrqrw,qweq,e";
+        function lenghtArray (string)
+        {
+           var array = string.split(",");
+            return array.length;
+        }
+        document.write(lenghtArray(string)+"<br>");
+
+       //Question 4.
+        var string1 = "f65t875cr76b87gjyd";
+        function sumNumberofString(string)
+        {
+            var summa = 0;
+            for (var i = 0; i < string.length; i++){
+               if (Number(parseInt(string[i]))) {
+                   summa += parseInt(string[i]);
+               }
+            }
+            return summa;
+        }
+        document.write(sumNumberofString(string1));
+
+    </script>
+</body>
+</html>
