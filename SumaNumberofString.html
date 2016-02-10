@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var string1 = "f65t875cr76b87gjyd";
+        function sumNumberofString(string)
+        {
+            var summa = 0;
+            for (var i = 0; i < string.length; i++){
+                if (Number(parseInt(string[i]))) {
+                    var j = i + 1;
+                    var numberString = string[i];
+                    while (Number(parseInt(string[j]))) {
+                        numberString += string[j];
+                        j++;
+                    }
+                    summa += parseInt(numberString);
+                    i = j - 1;
+                }
+            }
+            return summa;
+        }
+        document.write(sumNumberofString(string1));
+    </script>
+</body>
+</html>

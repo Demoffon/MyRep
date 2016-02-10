@@ -35,8 +35,15 @@
         {
             var summa = 0;
             for (var i = 0; i < string.length; i++){
-               if (Number(parseInt(string[i]))) {
-                   summa += parseInt(string[i]);
+                if (Number(parseInt(string[i]))) {
+                   var j = i + 1;
+                   var numberString = string[i];
+                   while (Number(parseInt(string[j]))) {
+                       numberString += string[j];
+                       j++;
+                   }
+                   summa += parseInt(numberString);
+                    i = j - 1;
                }
             }
             return summa;
